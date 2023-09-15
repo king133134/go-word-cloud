@@ -9,7 +9,7 @@ This is a word cloud generator written in Go.
 Make sure you have Go language environment installed and execute the following commands to install the required dependencies:
 ![example](https://github.com/king133134/go-word-cloud/blob/master/test/out.png)
 ```shell
-go get -u github.com/king133134/wordcloud
+go get -u github.com/king133134/go-word-cloud
 ```
 
 ## Example
@@ -17,7 +17,7 @@ go get -u github.com/king133134/wordcloud
 package main
 
 import (
-    "github.com/king133134/wordcloud"
+    "github.com/king133134/go-word-cloud"
     "golang.org/x/image/font/opentype"
     "image/color"
     "log"
