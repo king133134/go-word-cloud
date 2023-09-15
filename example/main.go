@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/king133134/wordcloud"
+	"github.com/king133134/go-word-cloud"
 	"golang.org/x/image/font/opentype"
 	"image/color"
 	"log"

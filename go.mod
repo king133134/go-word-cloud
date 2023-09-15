@@ -1,4 +1,4 @@
-module github.com/king133134/wordcloud
+module github.com/king133134/go-word-cloud
 
 go 1.18
 
