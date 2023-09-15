@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/king133134/wordcloud"
 	"golang.org/x/image/font/opentype"
 	"image/color"
@@ -10,8 +9,6 @@ import (
 )
 
 func main() {
-	arr := []int{2}
-	fmt.Println(arr[2])
 	randSize()
 }
 
