@@ -1,6 +1,6 @@
 module github.com/king133134/wordcloud
 
-go 1.20
+go 1.18
 
 require github.com/fogleman/gg v1.3.0
 
