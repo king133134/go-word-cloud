@@ -72,7 +72,7 @@ func NewRandColor() color.Color {
 func NewWords(words []string) []*Word {
 	res := make([]*Word, len(words))
 	for i, v := range words {
-		res[i] = NewWord(v, 10+rand.Intn(46), Color(NewRandColor()), Padding(1))
+		res[i] = NewWord(v, 10+rand.Intn(46), Color(NewRandColor()), Padding(0))
 	}
 	sort.Slice(res, func(i, j int) bool {
 		return res[i].size > res[j].size
