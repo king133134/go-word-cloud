@@ -214,8 +214,6 @@ func (_this *WordCloud) calPixels(words []*Word) []*pixel {
 		bits := make([]uint64, ((width-1)>>6+1)*height)
 		idx := 0
 
-		// setBorder(dc, left, top, width, height)
-
 		yOff1, yOff2 := 0, -1
 		xOff1, xOff2 := _this.width-1, 0
 		rowBits := (width-1)>>6 + 1
