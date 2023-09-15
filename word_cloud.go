@@ -340,7 +340,7 @@ func (_this *WordCloud) place(dc *gg.Context, board []uint64, word *Word, px *pi
 	}
 	x, y, success := 0, 0, false
 	for i := 0; i < 10 && !success; i++ {
-		x, y, success = _this.placeByDt(dt, board, px)
+		x, y, success = _this.placeByDt(dt, i < 2, board, px)
 		dt = -dt
 	}
 	if !success {
@@ -384,7 +384,7 @@ func max(a, b int) int {
 	return b
 }
 
-func (_this *WordCloud) placeByDt(dt int, board []uint64, px *pixel) (x, y int, success bool) {
+func (_this *WordCloud) placeByDt(dt int, randPos bool, board []uint64, px *pixel) (x, y int, success bool) {
 	const (
 		step = 0.1
 		b    = 1
@@ -393,10 +393,11 @@ func (_this *WordCloud) placeByDt(dt int, board []uint64, px *pixel) (x, y int, 
 	w, h := _this.width, _this.height
 	maxDelta := math.Sqrt(float64(w*w + h*h))
 	e := float64(w) / float64(h)
-	t := 0
-	// x, y = w*(rand.Intn(1001)+500)/2000, h*(rand.Intn(1001)+500)/2000
 	x, y = w>>1, h>>1
-	for t += dt; ; t += dt {
+	if randPos {
+		x, y = w*(rand.Intn(1001)+500)/2000, h*(rand.Intn(1001)+500)/2000
+	}
+	for t := dt; ; t += dt {
 		dx, dy := position(t, e, step, a, b)
 		if math.Min(math.Abs(dx), math.Abs(dy)) > maxDelta {
 			return
