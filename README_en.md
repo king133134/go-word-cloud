@@ -1,10 +1,14 @@
 * [English](README_en.md) ∙ [简体中文](README.md)
-# 通过go来生成词云
+# Word Cloud Generator
 
-## 使用
-### 效果图
+This is a word cloud generator written in Go.
+
+## Usage
+
+### Install Dependencies
+
+Make sure you have Go language environment installed and execute the following commands to install the required dependencies:
 ![example](./test/out.png)
-### 安装
 ```shell
 go get -u github.com/king133134/go-word-cloud
 ```
@@ -73,6 +77,6 @@ func custom() {
 }
 ```
 
-## 许可
+## LICENSE
 
 [MIT](https://github.com/king133134/leetCodeTests/blob/master/LICENSE)
